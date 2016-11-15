@@ -476,6 +476,7 @@ public class Server {
                 l = new ArrayList(l);
                 for (Iterator i = l.iterator(); i.hasNext(); ) {
                   Listener sh = (Listener)i.next();
+                  //TODO CUIDAO CON ESTO h.put("message-id","1234");
                   try {
                     sh.message( h, b );
                   } catch (Exception e) {

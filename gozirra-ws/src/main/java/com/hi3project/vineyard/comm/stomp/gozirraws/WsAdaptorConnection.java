@@ -29,7 +29,9 @@ public class WsAdaptorConnection extends Thread {
                 if(socket.getInputStream().available()>0){
                     byte  b= (byte) socket.getInputStream().read();
                     message = message + (char) b;
-                    if (b==0x0){
+                    if (b=="\000".getBytes()[0]){
+                        message = message.substring(0, message.length()-1);
+                        message = message +"\000";
                         sendMessageToWsClient(message);
                         message = "";
 

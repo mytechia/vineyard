@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="gozirra-ws" />
+        <module name="Java-WebSocket" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gozirra-ws" target="1.7" />
+      <module name="Java-WebSocket" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
